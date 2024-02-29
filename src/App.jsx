@@ -8,6 +8,8 @@ import SignIn from "./Components/SignIn";
 import Courses from "./Components/Courses";
 import AddCourse from "./Components/AddCourse";
 import Init from "./Components/Init";
+import { Landing } from "./Components/Landing";
+
 
 function App(){ 
 
@@ -15,10 +17,11 @@ function App(){
 
     <RecoilRoot>
       <div style={{ backgroundColor: "#ffffff", width:"100vw", height: "100vh"}}>
-        <Router >
+        <Router > 
           <AppBar />
           <Init />
             <Routes>
+              <Route path="/landing" element={<Landing />} />
               <Route path="/addcourse" element={<AddCourse />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="/signup" element={<Signup />} />

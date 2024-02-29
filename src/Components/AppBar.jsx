@@ -61,7 +61,7 @@ function SigninComponent() {
 
     return <div style={{display: "flex", justifyContent:"space-between"}}>
         <div>
-            <Typography variant="h5">Coursera</Typography>
+            <Typography variant="h5" style={{cursor:"pointer"}} onClick={() => { navigate("/landing")}} >Coursera</Typography>
         </div>
         <div>
             <Button style={{ marginRight:10}} variant="contained" size="large" onClick={()=> { 
