@@ -9,18 +9,21 @@ import Courses from "./Components/Courses";
 import AddCourse from "./Components/AddCourse";
 import Init from "./Components/Init";
 import { Landing } from "./Components/Landing";
+import { Course } from "./Components/Course";
+
 
 
 function App(){ 
 
   return (
-
+    <div style={{width:"100wv", height:"100hv", backgroundColor:"#eeeeee"}}>
     <RecoilRoot>
       <div style={{ backgroundColor: "#ffffff", width:"100vw", height: "100vh"}}>
         <Router > 
           <AppBar />
           <Init />
             <Routes>
+              <Route path="/course/:courseId" element={<Course />} />
               <Route path="/landing" element={<Landing />} />
               <Route path="/addcourse" element={<AddCourse />} />
               <Route path="/courses" element={<Courses />} />
@@ -30,6 +33,7 @@ function App(){
         </Router>
         </div>
         </RecoilRoot>
+        </div>
         
      
   )

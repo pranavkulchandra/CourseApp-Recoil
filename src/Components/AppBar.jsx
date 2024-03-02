@@ -39,9 +39,9 @@ function SignOutCOmponent  () {
 
     return <div style={{display:"flex", justifyContent: "space-between"}}>
         <div>
-            <Typography >Coursera</Typography>
+            <Typography onClick={() => { navigate("/landing")}} style={{cursor:"pointer"}} >Coursera</Typography>
             </div>
-        <div>
+        <div style={{marginTop:5}}>
             <Button variant="contained" size="large" style={{ marginRight:10}} onClick={() => {navigate("/addcourse")}}>Add Course</Button>
             <Button variant="contained" size="large" style={{ marginRight:10}} onClick={() => {navigate("/courses")}}>Courses</Button>
             <Button variant="contained" size="large" onClick={() =>  {
@@ -63,7 +63,7 @@ function SigninComponent() {
         <div>
             <Typography variant="h5" style={{cursor:"pointer"}} onClick={() => { navigate("/landing")}} >Coursera</Typography>
         </div>
-        <div>
+        <div style={{marginTop:5}}>
             <Button style={{ marginRight:10}} variant="contained" size="large" onClick={()=> { 
                 navigate("/signup")
             }}>SignUp</Button>

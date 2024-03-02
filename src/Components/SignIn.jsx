@@ -15,8 +15,8 @@ function SignIn(){
     const navigate = useNavigate()
 
     return <div style={{ display:"flex" , justifyContent:"center" , marginTop:200}}>
-            <Card style={{boxShadow:25,  width:400}}>
-                <Typography variant="h5" textAlign={"center"}>Wolcome Back to CourseRa</Typography>
+            <Card style={{boxShadow:25,  width:400, padding:20}}>
+                <Typography variant="h5" textAlign={"center"}>Welcome Back to Coursera!!</Typography>
                 <TextField fullWidth={true} style={{marginBottom: 10}}  label="Email" onChange={(e) => setUsername(e.target.value)}></TextField>
                 <TextField fullWidth={true} style={{marginBottom: 10}} label="Password" onChange={(e) => setPassword(e.target.value)}></TextField>
                 <div style={{ display:"flex", justifyContent: "center"}}>

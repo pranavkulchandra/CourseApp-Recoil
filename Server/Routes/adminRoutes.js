@@ -88,7 +88,8 @@ router.delete("/course/:courseId", authenticateJwt, async( req, res) => {
     const courseId = req.params.courseId; 
     const course = await Course.findByIdAndDelete(courseId)
     if(course) { 
-        res.status(201).json({ Message : `courseId ${courseId} has been deleted`})
+        const courses = await Course.find({})
+        res.status(201).json({ Message : `courseId ${courseId} has been deleted`, courses : courses})
     } else { 
         res.status(401).json({ Message : "Course not Found"})
     }
